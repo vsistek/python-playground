@@ -18,7 +18,7 @@ places:
   - {cs_CZ: venku, en_US: outside, de_DE: draußen}
 
 templates:
-  present_simple: 
+  present simple: 
     cs_CZ: "[subjects:cs_CZ] [places:cs_CZ] [predicates:cs_CZ_nom]."
     en_US: "[subjects:en_US] [predicates:en_US_nom] [places:en_US]."
     de_DE: "[subjects:de_DE] [predicates:de_DE_nom] [places:de_DE]."

@@ -10,6 +10,7 @@ with open("dada.yaml", 'r') as stream:
 
 languages  = data['languages']
 templates  = data['templates']
+template   = 'present simple' 
 
 def shuffle_random_sentence(template, langs):
     result = {}
@@ -38,8 +39,14 @@ def shuffle_random_sentence(template, langs):
         result[lang] = "{}{}".format(sentence[0].upper(), sentence[1:])
         mode = "translate"
 
-    return result
+    return result, choices
 
-snt = shuffle_random_sentence(templates['present_simple'], languages)
+snt, choices = shuffle_random_sentence(templates[template], languages)
+
+words = []
+for c in choices:
+    words.append(choices[c][languages[0]])
+
+print("{}, {}\n".format(", ".join(words), template))
 for lang in snt:
     print("{}: {}".format(lang, snt[lang]))
