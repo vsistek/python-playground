@@ -35,7 +35,7 @@ def shuffle_random_sentence(template, langs):
             else:
                 buf += char
         sentence += buf
-        result[lang] = sentence.capitalize()
+        result[lang] = "{}{}".format(sentence[0].upper(), sentence[1:])
         mode = "translate"
 
     return result
