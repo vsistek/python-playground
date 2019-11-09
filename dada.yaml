@@ -1,0 +1,24 @@
+languages:
+  - cs_CZ
+  - en_US
+  - de_DE
+
+subjects:
+  - {cs_CZ: máma, en_US: mom, de_DE: Mutti}
+  - {cs_CZ: táta, en_US: dad, de_DE: Papa}
+  - {cs_CZ: strýček, en_US: uncle, de_DE: Onkel}
+
+predicates:
+  - {cs_CZ: číst, en_US: read, de_DE: lesen, cs_CZ_nom: čte, en_US_nom: reads, de_DE_nom: liest}
+  - {cs_CZ: psát, en_US: write, de_DE: schreiben, cs_CZ_nom: píše, en_US_nom: writes, de_DE_nom: schreibt}
+  - {cs_CZ: počítat, en_US: count, de_DE: rechnen, cs_CZ_nom: počítá, en_US_nom: counts, de_DE_nom: rechnet}
+
+places:
+  - {cs_CZ: doma, en_US: at home, de_DE: zu Hause}
+  - {cs_CZ: venku, en_US: outside, de_DE: draußen}
+
+templates:
+  present_simple: 
+    cs_CZ: "[subjects:cs_CZ] [places:cs_CZ] [predicates:cs_CZ_nom]."
+    en_US: "[subjects:en_US] [predicates:en_US_nom] [places:en_US]."
+    de_DE: "[subjects:de_DE] [predicates:de_DE_nom] [places:de_DE]."
