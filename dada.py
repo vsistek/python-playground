@@ -1,3 +1,11 @@
+# Example output:
+# máma, venku, počítat, present simple
+#
+# cs_CZ: Máma venku počítá.
+# en_US: Mom counts outside.
+# de_DE: Mutti rechnet draußen.
+
+
 import yaml
 import random
 import re
