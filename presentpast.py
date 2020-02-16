@@ -8,50 +8,37 @@ with open("presentpast.yaml", 'r') as stream:
     except yaml.YAMLError as exc:
         print(exc)
 
-subjects  = data['subjects']
-activities = data['activities']
-templates = data['templates']
-
 def genrandomtask(data):
     # pick random template
     template = random.choice(data['templates'])
-    # render task
-    stream = next(iter(template))
-    task = ""
-    buf = ""
     choices = {}
-    for char in stream:
-        if char == "[":
-            task += buf
-            buf = ""
-        elif char == ":":
-            choice = random.choice(data[buf])
-            choices[buf] = choice
-            buf = ""
-        elif char == "]":
-            task += choice[buf]
-            buf = ""
-        else:
-            buf += char
-    task += buf
-
-    # render solution
-    stream = template[stream]
-    solution = ""
-    buf = ""
-    for char in stream:
-        if char == "[":
-            solution += buf
-            buf = ""
-        elif char == ":":
-            choice = choices[buf]
-            buf = ""
-        elif char == "]":
-            solution += choice[buf]
-            buf = ""
-        else:
-            buf += char
-    solution += buf
+    mode = "task"
+    for stream in template: 
+        out = ""
+        buf = ""
+        for char in stream:
+            if char == "[":
+                out += buf
+                buf = ""
+            elif char == ":":
+                if mode == "task":
+                    choice = random.choice(data[buf])
+                    choices[buf] = choice
+                    buf = ""
+                elif mode == "solution":
+                    choice = choices[buf]
+                    buf = ""
+            elif char == "]":
+                out += choice[buf]
+                buf = ""
+            else:
+                buf += char
+        out += buf
+        if mode == "task":
+           task = out
+           mode = "solution"
+        elif mode == "solution":
+           solution = out
 
     return task.capitalize(), solution.capitalize()
 

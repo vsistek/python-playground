@@ -33,15 +33,15 @@ activities:
      ENpast3pneg: didn't go to work}
 
 templates:
-  - "Já / [activities:CZ] / + / present simple" : "I [activities:ENpresent]."
-  - "Ty / [activities:CZ] / + / present simple" : "You [activities:ENpresent]."
-  - "[subjects:CZ] / [activities:CZ] / + / present simple" : "[subjects:EN] [activities:ENpresent3p]."
-  - "Já / [activities:CZ] / - / present simple" : "I [activities:ENpresentneg]."
-  - "Ty / [activities:CZ] / - / present simple" : "You [activities:ENpresentneg]."
-  - "[subjects:CZ] / [activities:CZ] / - / present simple" : "[subjects:EN] [activities:ENpresent3pneg]."
-  - "Já / [activities:CZ] / + / past simple" : "I [activities:ENpast]."
-  - "Ty / [activities:CZ] / + / past simple" : "You [activities:ENpast]."
-  - "[subjects:CZ] / [activities:CZ] / + / past simple" : "[subjects:EN] [activities:ENpast3p]."
-  - "Já / [activities:CZ] / - / past simple" : "I [activities:ENpastneg]."
-  - "Ty / [activities:CZ] / - / past simple" : "You [activities:ENpastneg]."
-  - "[subjects:CZ] / [activities:CZ] / - / past simple" : "[subjects:EN] [activities:ENpast3pneg]."
+  - ["Já / [activities:CZ] / + / present simple" , "I [activities:ENpresent]."]
+  - ["Ty / [activities:CZ] / + / present simple" , "You [activities:ENpresent]."]
+  - ["[subjects:CZ] / [activities:CZ] / + / present simple" , "[subjects:EN] [activities:ENpresent3p]."]
+  - ["Já / [activities:CZ] / - / present simple" , "I [activities:ENpresentneg]."]
+  - ["Ty / [activities:CZ] / - / present simple" , "You [activities:ENpresentneg]."]
+  - ["[subjects:CZ] / [activities:CZ] / - / present simple" , "[subjects:EN] [activities:ENpresent3pneg]."]
+  - ["Já / [activities:CZ] / + / past simple" , "I [activities:ENpast]."]
+  - ["Ty / [activities:CZ] / + / past simple" , "You [activities:ENpast]."]
+  - ["[subjects:CZ] / [activities:CZ] / + / past simple" , "[subjects:EN] [activities:ENpast3p]."]
+  - ["Já / [activities:CZ] / - / past simple" , "I [activities:ENpastneg]."]
+  - ["Ty / [activities:CZ] / - / past simple" , "You [activities:ENpastneg]."]
+  - ["[subjects:CZ] / [activities:CZ] / - / past simple" , "[subjects:EN] [activities:ENpast3pneg]."]
