@@ -1,0 +1,47 @@
+subjects:
+  - {CZ: máma, EN: mom}
+  - {CZ: táta, EN: dad}
+  - {CZ: strýček, EN: uncle}
+
+activities:
+  - {CZ: číst knihu,
+     ENpresent: read a book,
+     ENpresentneg: don't read a book,
+     ENpresent3p: reads a book,
+     ENpresent3pneg: doesn't read a book,
+     ENpast: read a book,
+     ENpastneg: didn't read a book,
+     ENpast3p: read a book,
+     ENpast3pneg: didn't read a book}
+  - {CZ: psát emaily,
+     ENpresent: write emails,
+     ENpresentneg: don't write emails,
+     ENpresent3p: writes emails,
+     ENpresent3pneg: doesn't write emails,
+     ENpast: wrote emails,
+     ENpastneg: didn't write emails,
+     ENpast3p: wrote emails,
+     ENpast3pneg: didn't write emails}
+  - {CZ: jít do práce,
+     ENpresent: go to work,
+     ENpresentneg: don't go to work,
+     ENpresent3p: goes to work,
+     ENpresent3pneg: doesn't go to work,
+     ENpast: went to work,
+     ENpastneg: didn't go to work,
+     ENpast3p: went to work,
+     ENpast3pneg: didn't go to work}
+
+templates:
+  - "Já / [activities:CZ] / + / present simple" : "I [activities:ENpresent]."
+  - "Ty / [activities:CZ] / + / present simple" : "You [activities:ENpresent]."
+  - "[subjects:CZ] / [activities:CZ] / + / present simple" : "[subjects:EN] [activities:ENpresent3p]."
+  - "Já / [activities:CZ] / - / present simple" : "I [activities:ENpresentneg]."
+  - "Ty / [activities:CZ] / - / present simple" : "You [activities:ENpresentneg]."
+  - "[subjects:CZ] / [activities:CZ] / - / present simple" : "[subjects:EN] [activities:ENpresent3pneg]."
+  - "Já / [activities:CZ] / + / past simple" : "I [activities:ENpast]."
+  - "Ty / [activities:CZ] / + / past simple" : "You [activities:ENpast]."
+  - "[subjects:CZ] / [activities:CZ] / + / past simple" : "[subjects:EN] [activities:ENpast3p]."
+  - "Já / [activities:CZ] / - / past simple" : "I [activities:ENpastneg]."
+  - "Ty / [activities:CZ] / - / past simple" : "You [activities:ENpastneg]."
+  - "[subjects:CZ] / [activities:CZ] / - / past simple" : "[subjects:EN] [activities:ENpast3pneg]."
