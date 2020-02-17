@@ -42,8 +42,16 @@ def genrandomtask(data):
 
     return task.capitalize(), solution.capitalize()
 
+def quit():
+    print("\nDěkujeme za použití programu.")
+    exit(0)
+
 while True:
-    task, solution = genrandomtask(data)
-    print(task)
-    input()
-    print("Správná odpověď: {}\n".format(solution))
+    try:
+        task, solution = genrandomtask(data)
+        print(task)
+        inp = input()
+        print("Správná odpověď: {}\n".format(solution))
+        if inp != "": quit()
+    except KeyboardInterrupt:
+        quit()
