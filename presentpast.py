@@ -9,7 +9,6 @@ with open("presentpast.yaml", 'r') as stream:
         print(exc)
 
 def genrandomtask(data):
-    # pick random template
     template = random.choice(data['templates'])
     choices = {}
     mode = "task"
@@ -24,10 +23,9 @@ def genrandomtask(data):
                 if mode == "task":
                     choice = random.choice(data[buf])
                     choices[buf] = choice
-                    buf = ""
                 elif mode == "solution":
                     choice = choices[buf]
-                    buf = ""
+                buf = ""
             elif char == "]":
                 out += choice[buf]
                 buf = ""
@@ -35,12 +33,12 @@ def genrandomtask(data):
                 buf += char
         out += buf
         if mode == "task":
-           task = out
+           task = out.capitalize()
            mode = "solution"
         elif mode == "solution":
-           solution = out
+           solution = out.capitalize()
 
-    return task.capitalize(), solution.capitalize()
+    return task, solution
 
 def quit():
     print("\nDěkujeme za použití programu.")
