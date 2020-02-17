@@ -1,12 +1,8 @@
+#!/usr/bin/env python3
+
+import sys
 import yaml
 import random
-import re
-
-with open("presentpast.yaml", 'r') as stream:
-    try:
-        data = yaml.safe_load(stream)
-    except yaml.YAMLError as exc:
-        print(exc)
 
 def genrandomtask(data):
     template = random.choice(data['templates'])
@@ -44,12 +40,26 @@ def quit():
     print("\nDěkujeme za použití programu.")
     exit(0)
 
-while True:
-    try:
-        task, solution = genrandomtask(data)
-        print(task)
-        inp = input()
-        print("Správná odpověď: {}\n".format(solution))
-        if inp != "": quit()
-    except KeyboardInterrupt:
-        quit()
+def main(argv):
+    if len(argv) != 2:
+        print("Usage: {} data.yaml".format(argv[0]))
+        exit(64)
+
+    with open(argv[1], 'r') as stream:
+        try:
+            data = yaml.safe_load(stream)
+        except yaml.YAMLError as exc:
+            print(exc)
+
+    while True:
+        try:
+            task, solution = genrandomtask(data)
+            print(task)
+            inp = input()
+            print("Správná odpověď: {}\n".format(solution))
+            if inp != "": quit()
+        except KeyboardInterrupt:
+            quit()
+
+if __name__ == "__main__":
+   main(sys.argv)
